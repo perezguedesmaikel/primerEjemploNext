@@ -7,7 +7,7 @@ export default function index({items}) {
     return(
         <Layout><h1>Store</h1>
             {
-                items && items.map((item=><div key={item.id}><Image src={item.image} width={'200px'} height={'200px'}/>{item.title}</div>))
+                items && items.map(item=><div key={item.id}><Image src={item.image} width={'200px'} height={'200px'}/>{item.title}</div>)
             }
         </Layout>
     )
