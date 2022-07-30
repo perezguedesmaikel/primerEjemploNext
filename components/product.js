@@ -5,13 +5,14 @@ import style from '../styles/product.module.css';
 
 function Product({item,showAs}) {
 if(showAs==='Page'){
-    return <div>Page</div>
+    const {data}=item;
+    return <div>{data.title}</div>
 }
     if(showAs==='ListItem'){
         return <div>list Item</div>
     }
   return <div className={style.item}><div>
-      <Link href={`/store/url-a-mi-componente`}>
+      <Link href={`/store/${item.id}`}>
           <a>
               <Image src={item.image} alt={item.description} width={'500px'} height={'500px'}/>
           </a>
